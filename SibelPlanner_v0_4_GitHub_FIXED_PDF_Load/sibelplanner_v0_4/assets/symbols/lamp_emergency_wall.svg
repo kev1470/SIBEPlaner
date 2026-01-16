@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160">
+  <rect x="22" y="30" width="20" height="100" rx="4" fill="#FFFFFF"/>
+  <rect x="44" y="54" width="70" height="52" rx="10" fill="rgba(0,0,0,0.35)" stroke="#FFFFFF" stroke-width="8"/>
+  <path d="M118 60c10 10 10 30 0 40" stroke="#FFFFFF" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <text x="80" y="150" font-size="16" text-anchor="middle" fill="#CBD5E1" font-family="Arial" font-weight="700">Wand-Notleuchte</text>
+</svg>

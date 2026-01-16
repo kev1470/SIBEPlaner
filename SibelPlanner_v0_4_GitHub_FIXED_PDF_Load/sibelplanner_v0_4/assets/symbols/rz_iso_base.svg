@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="160" viewBox="0 0 240 160">
+  <rect x="4" y="4" width="232" height="152" rx="14" fill="#0A7A2A" stroke="#FFFFFF" stroke-width="8"/>
+  <!-- Door -->
+  <rect x="28" y="44" width="56" height="88" rx="6" fill="#FFFFFF"/>
+  <rect x="40" y="56" width="32" height="64" rx="4" fill="#0A7A2A"/>
+  <!-- Running man (stylized) -->
+  <g fill="#FFFFFF" transform="translate(92,40)">
+    <circle cx="22" cy="18" r="10"/>
+    <path d="M20 32 l18 10 16 -10 8 12 -20 12 -12 26 -14 -6 12 -22 -16 -8z"/>
+    <path d="M14 64 l-20 18 10 10 18 -16z"/>
+    <path d="M48 60 l20 20 -10 10 -18 -18z"/>
+  </g>
+</svg>
