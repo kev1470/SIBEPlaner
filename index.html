@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sicherheitsbeleuchtung Planer – HTML</title>
+  <meta name="theme-color" content="#0b1220">
+  <style>
+    :root{
+      --bg:#0b1220;
+      --panel:#141b2a;
+      --panel-2:#1c2536;
+      --ink:#f8fafc;
+      --muted:#9aa4b2;
+      --accent:#22c55e;
+      --accent-ink:#03110a;
+      --danger:#f97316;
+      --line:#2b3548;
+      --focus:#60a5fa;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font:14px/1.4 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--ink);
+      background:var(--bg);
+    }
+    header{
+      position:sticky;
+      top:0;
+      z-index:10;
+      background:linear-gradient(90deg,#0f172a,#111827);
+      border-bottom:1px solid var(--line);
+      padding:10px 16px;
+      display:flex;
+      gap:16px;
+      align-items:center;
+      justify-content:space-between;
+    }
+    header h1{
+      font-size:16px;
+      margin:0;
+      letter-spacing:.3px;
+    }
+    header .hint{
+      color:var(--muted);
+      font-size:12px;
+    }
+    main{
+      display:grid;
+      grid-template-columns:280px 1fr;
+      gap:12px;
+      padding:12px;
+    }
+    @media(max-width:980px){
+      main{grid-template-columns:1fr}
+    }
+    .panel{
+      background:var(--panel);
+      border:1px solid var(--line);
+      border-radius:12px;
+      padding:12px;
+    }
+    .panel h2{
+      font-size:14px;
+      margin:0 0 8px 0;
+    }
+    .stack{display:flex;flex-direction:column;gap:8px}
+    label{font-size:12px;color:var(--muted)}
+    input[type="file"],
+    input[type="text"],
+    select,
+    button,
+    input[type="range"]{
+      font:inherit;
+    }
+    input[type="text"],select{
+      width:100%;
+      padding:8px 10px;
+      border-radius:10px;
+      border:1px solid var(--line);
+      background:var(--panel-2);
+      color:var(--ink);
+    }
+    .btn{
+      background:var(--accent);
+      color:var(--accent-ink);
+      border:0;
+      padding:8px 10px;
+      border-radius:10px;
+      font-weight:700;
+      cursor:pointer;
+    }
+    .btn.secondary{
+      background:transparent;
+      border:1px solid var(--accent);
+      color:var(--ink);
+    }
+    .btn.danger{
+      background:var(--danger);
+      color:#fff;
+    }
+    .btn:disabled{
+      opacity:.5;
+      cursor:not-allowed;
+    }
+    .tool-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:6px;
+    }
+    .symbol-btn{
+      border:1px solid var(--line);
+      background:var(--panel-2);
+      padding:8px;
+      border-radius:10px;
+      color:var(--ink);
+      display:flex;
+      align-items:center;
+      gap:8px;
+      cursor:pointer;
+      min-height:48px;
+    }
+    .symbol-btn.active{
+      border-color:var(--focus);
+      box-shadow:0 0 0 2px #1d4ed8;
+    }
+    .symbol-btn svg{
+      width:28px;
+      height:28px;
+      flex:0 0 auto;
+    }
+    .canvas-wrap{
+      background:var(--panel);
+      border:1px solid var(--line);
+      border-radius:12px;
+      padding:8px;
+      min-height:70vh;
+      position:relative;
+    }
+    .canvas-toolbar{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      margin-bottom:8px;
+    }
+    .canvas-area{
+      position:relative;
+      background:#0a0f1d;
+      border-radius:10px;
+      overflow:auto;
+      border:1px dashed #24324a;
+      min-height:60vh;
+    }
+    #pdfCanvas{
+      display:block;
+      margin:0 auto;
+      background:#111827;
+    }
+    #overlay{
+      position:absolute;
+      inset:0;
+      pointer-events:none;
+    }
+    .overlay-item{
+      position:absolute;
+      pointer-events:auto;
+      cursor:grab;
+      transform-origin:center;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .overlay-item.selected{
+      outline:2px solid var(--focus);
+      border-radius:6px;
+    }
+    .overlay-item svg{
+      width:100%;
+      height:100%;
+    }
+    .status{
+      font-size:12px;
+      color:var(--muted);
+    }
+    .legend{
+      font-size:12px;
+      color:var(--muted);
+      line-height:1.4;
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js" defer></script>
+</head>
+<body>
+  <!-- (Rest der Datei unverändert) -->
+</body>
+</html>
